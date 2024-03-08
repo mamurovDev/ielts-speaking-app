@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className + "flex h-screen items-center flex-col"}>
+      <body className={inter.className + " flex h-screen items-center"}>
         <Navigation />
         {children}
       </body>

@@ -10,13 +10,13 @@ import { Anybody } from "next/font/google";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyDwJJINmA5k4f_k1B9oY--nldbWijna79w",
-  authDomain: "ielts-speaking-app-8c36c.firebaseapp.com",
-  projectId: "ielts-speaking-app-8c36c",
-  storageBucket: "ielts-speaking-app-8c36c.appspot.com",
-  messagingSenderId: "505105059771",
-  appId: "1:505105059771:web:4a7a28b9b57c3798827e9e",
-  measurementId: "G-PQTWTGTK2M",
+  apiKey: process.env.API_KEY,
+  authDomain: process.env.AUTH_DOMAIN,
+  projectId: process.env.PROJECT_ID,
+  storageBucket: process.env.STORAGE_BUCKET,
+  messagingSenderId: process.env.MESSAGING_SENDER_ID,
+  appId: process.env.APP_ID,
+  measurementId: process.env.MEASUREMENT_ID,
 };
 
 // Initialize Firebase
