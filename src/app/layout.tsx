@@ -3,6 +3,13 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Navigation } from "@/components";
 
+import { Inter as FontSans } from "next/font/google";
+
+const fontSans = FontSans({
+  subsets: ["latin"],
+  variable: "--font-sans",
+});
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -17,7 +24,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className + " flex h-screen items-center"}>
+      <body
+        className={
+          fontSans.variable +
+          " flex h-screen items-center bg-black font-sans bg-background"
+        }
+      >
         <Navigation />
         {children}
       </body>
