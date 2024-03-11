@@ -1,3 +1,3 @@
-export default function Page(){
-    return <>part1</>
+export default function Page() {
+  return <>part1</>;
 }
