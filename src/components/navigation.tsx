@@ -11,7 +11,7 @@ const getData = async () => {
 export const Navigation = async () => {
   let data = await getData();
   return (
-    <nav className="flex flex-col h-[90%] w-72 border-[1px] border-slate-800 rounded-lg ml-2 self-center items-center">
+    <aside className="flex flex-col h-[90%] w-72 border-[1px] border-slate-800 rounded-lg ml-2 self-center items-center">
       <div className="w-[95%] flex items-center mt-2">
         <Avatar>
           <AvatarImage src="https://github.com/shadcn.png" />
@@ -52,6 +52,6 @@ export const Navigation = async () => {
           </Button>
         </Link>
       </div>
-    </nav>
+    </aside>
   );
 };
