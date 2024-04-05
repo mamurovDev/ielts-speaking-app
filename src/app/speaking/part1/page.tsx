@@ -8,16 +8,11 @@ export default function Page() {
       <h2 className="text-3xl font-bold absolute top-0 left-0 w-full bg-black z-10 px-4 border-b-[1px] border-slate-800 p-2">
         Questions
       </h2>
-      <div className="overflow-auto flex flex-col items-center justify-center w-full h-full mt-16">
+      <div className="flex flex-col items-center justify-center w-full h-full mt-16">
         <Select img={tempUrl} question="Hello world!" />
         <Select img={tempUrl} question="Hello world!" />
         <Select img={tempUrl} question="Hello world!" />
-        <Select img={tempUrl} question="Hello world!" />
-        <Select img={tempUrl} question="Hello world!" />
-        <Select img={tempUrl} question="Hello world!" />
-        <Select img={tempUrl} question="Hello world!" />
-        <Select img={tempUrl} question="Hello world!" />
-        <Select img={tempUrl} question="Hello world!" />
+   
         <Select img={tempUrl} question="Hello world!" />
         <Select img={tempUrl} question="Hello world!" />
         <Select img={tempUrl} question="Hello world!" />

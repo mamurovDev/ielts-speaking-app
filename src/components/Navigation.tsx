@@ -24,9 +24,13 @@ export const Navigation = async () => {
         </Avatar>
         <p className="ml-2"> Nurmuhammad</p>
       </div>
+      <hr
+        className="w-[92%] border-slate-700 mt-2v
+      "
+      />
       <div className="mt-8 flex flex-col w-full items-center">
         <h2 className="font-bold self-start ml-2 text-3xl">Speaking</h2>
-        <Link href={"/part1"} className="w-[95%]">
+        <Link href={"/speaking/part1"} className="w-[95%]">
           <Button
             className="mt-2 w-full justify-between items-center"
             variant={"secondary"}
@@ -38,7 +42,7 @@ export const Navigation = async () => {
             {data?.part1.length}
           </Button>
         </Link>
-        <Link href={"/part2"} className="w-[95%]">
+        <Link href={"/speaking/part2"} className="w-[95%]">
           <Button className="mt-2 w-full justify-between items-center">
             <div className="flex">
               <MessagesSquare className="mr-2" />
@@ -47,7 +51,7 @@ export const Navigation = async () => {
             45
           </Button>
         </Link>
-        <Link href={"/part3"} className="w-[95%]">
+        <Link href={"/speaking/part3"} className="w-[95%]">
           <Button className="mt-2 w-full justify-between items-center">
             <div className="flex">
               <Speech className="mr-2" />
