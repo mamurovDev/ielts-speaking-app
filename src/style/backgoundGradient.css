@@ -1,0 +1,26 @@
+.gradient-container {
+  background: radial-gradient(circle, #110300, #000000);
+  background-size: 400% 400%; /* Adjust the background size as needed */
+  animation: gradientChange 30s linear infinite;
+  animation-timing-function: ease-in-out;
+
+  background-repeat: no-repeat;
+}
+
+@keyframes gradientChange {
+    0% {
+      background-position: 0% 0%;
+    }
+    25% {
+      background-position: 100% 0%;
+    }
+    50% {
+      background-position: 0% 100%;
+    }
+    75% {
+      background-position: 100% 100%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+  }

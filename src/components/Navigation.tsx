@@ -4,7 +4,7 @@ import { GraduationCap, MessagesSquare, Speech } from "lucide-react";
 import Link from "next/link";
 const getData = async () => {
   try {
-    const res = await fetch("http://localhost:3000/api/topics/");
+    const res = await fetch("http://localhost:3000/api/speaking/");
     const data = await res.json();
     return data;
   } catch (error) {
