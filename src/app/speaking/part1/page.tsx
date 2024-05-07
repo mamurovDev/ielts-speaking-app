@@ -22,10 +22,10 @@ export default async function Page() {
   const getPart1 = async (): Promise<
     { part1: PartOneQuestions[] } | undefined
   > => {
+    const baseURL = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+
     try {
-      const res = await fetch(
-        `${process.env.NEXT_PUBLIC_BASE_URL}/api/speaking`
-      );
+      const res = await fetch(`${baseURL}/api/speaking`);
       const data = await res.json();
       return data;
     } catch (error) {
