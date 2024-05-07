@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { Button } from "./ui/button";
-import { icons } from "lucide-react";
 interface NavigationButton {
   route: string;
   name: string;

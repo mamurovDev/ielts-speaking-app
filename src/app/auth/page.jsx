@@ -30,7 +30,7 @@ export default function Page() {
   );
 }
 
-export function GoogleIcon() {
+function GoogleIcon() {
   return (
     <>
       <svg

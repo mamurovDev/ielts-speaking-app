@@ -15,12 +15,16 @@ export const Select = ({
   author,
   lastUpdatedTime,
   preview,
-  questionId
+  questionId,
 }: Question) => {
   const router = useRouter();
-  const handleRedirecter = (event: React.MouseEvent<HTMLDivElement>) => {
+  const handleRedirecter = (event: React.MouseEvent<HTMLElement>) => {
     event.preventDefault();
-    router.push("/speaking/part1/" + questionId);
+    if (event.target instanceof HTMLButtonElement) {
+      router.push("/user/" + author);
+    } else {
+      router.push("part1/" + questionId);
+    }
   };
 
   return (
@@ -32,13 +36,14 @@ export const Select = ({
         <h3 className="text-3xl">{question}</h3>
         <p className=" text-sm w-[70%]">{preview}</p>
       </div>
-      <div className="flex flex-col h-full mr-3 justify-center">
+      <div className="flex flex-col h-full mr-3 justify-center min-w-[190px]">
         <div className="w-full flex justify-between">
           <Badge className="bg-orange-500">New!</Badge>
           <time dateTime="2024-04-01 13:45">{lastUpdatedTime}</time>
         </div>
         <p className="flex justify-between">
-          Author: <Link href={"user/" + author}> {author}</Link>
+          Author:{" "}
+          <button className="text-orange-500" onClick={(event) => handleRedirecter(event)}>{author}</button>
         </p>
       </div>
     </div>
