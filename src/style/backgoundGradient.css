@@ -1,5 +1,5 @@
 .gradient-container {
-  background: radial-gradient(circle, #110300, #000000);
+  background: radial-gradient(circle, #1c0500, #000000);
   background-size: 400% 400%; /* Adjust the background size as needed */
   animation: gradientChange 30s linear infinite;
   animation-timing-function: ease-in-out;

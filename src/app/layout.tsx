@@ -27,7 +27,7 @@ export default function RootLayout({
       <body
         className={
           fontSans.variable +
-          " flex h-screen items-center bg-black font-sans bg-background text-white"
+          " flex items-center bg-black font-sans  text-white "
         }
       >
         {children}

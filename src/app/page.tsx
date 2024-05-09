@@ -11,11 +11,11 @@ export default function Home() {
     paddingBottom: "5px",
   };
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gradient-container">
-      <h1 className="md:text-5xl lg:text-6xl font-bold sm:text-3xl ">
+    <div className="w-full min-h-screen flex flex-col items-center justify-center  gradient-container">
+      <h1 className="md:text-5xl lg:text-6xl font-bold sm:text-2xl sm:mt-10 md:mt-0">
         Let&apos;s start <p style={linerStyle}>improving</p> today! 🙂
       </h1>
-      <article className="flex mt-8 w-[75%] justify-around sm:flex-col md:flex-row">
+      <article className="flex mt-8 md:w-[90%] lg:w-[75%] justify-around sm:flex-col md:flex-row">
         <HomeCards
           title="Explore quick questions & answers"
           imagePath="/part1.png"
