@@ -2,24 +2,11 @@ import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { GraduationCap, MessagesSquare, Speech } from "lucide-react";
 
-import Link from "next/link";
 import { NavigationButton } from "./NavigationButton";
-const getData = async () => {
-  try {
-    const res = await fetch("http://localhost:3000/api/speaking/");
-    const data = await res.json();
-    return data;
-  } catch (error) {
-    console.error(error);
-    return;
-  }
-};
 
 export const Navigation = async () => {
-  let data = await getData();
-
   return (
-    <aside className="flex flex-col h-[90%] w-72 border-[1px] border-slate-800 rounded-lg ml-2 self-center items-center bg-main">
+    <aside className="sm:hidden md:flex flex-col h-[90%] w-72 border-[1px] border-slate-800 rounded-lg ml-2 self-center items-center bg-main">
       <div className="w-[95%] flex items-center mt-2">
         <Avatar>
           <AvatarImage src="https://github.com/shadcn.png" />
