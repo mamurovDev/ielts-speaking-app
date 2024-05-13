@@ -29,21 +29,26 @@ export const Select = ({
 
   return (
     <div
-      className="mt-2 flex text-white border-[1px] border-slate-800 rounded-lg w-[97%] h-24 cursor-pointer bg-main justify-between"
+      className="mt-2 flex sm:flex-col sm:h-32 text-white border-[1px] border-slate-800 rounded-lg w-[97%] sm:h-auto md:h-24 cursor-pointer bg-main justify-between"
       onClick={(event) => handleRedirecter(event)}
     >
       <div className="flex flex-col ml-3 justify-center">
-        <h3 className="text-3xl">{question}</h3>
-        <p className=" text-sm w-[70%]">{preview}</p>
+        <h3 className="sm:text-2xl md:text-3xl">{question}</h3>
+        <p className=" sm:text-sm md:text-xl md:w-[70%] sm:w-[99%]">{preview}</p>
       </div>
       <div className="flex flex-col h-full mr-3 justify-center min-w-[190px]">
-        <div className="w-full flex justify-between">
+        <div className="w-full flex md:justify-between sm:justify-end">
           <Badge className="bg-orange-500">New!</Badge>
-          <time dateTime="2024-04-01 13:45">{lastUpdatedTime}</time>
+          <time dateTime="2024-04-01 13:45" className="sm:ml-2">{lastUpdatedTime}</time>
         </div>
-        <p className="flex justify-between">
+        <p className="flex md:justify-between sm:justify-end">
           Author:{" "}
-          <button className="text-orange-500" onClick={(event) => handleRedirecter(event)}>{author}</button>
+          <button
+            className="text-orange-500 sm:ml-2"
+            onClick={(event) => handleRedirecter(event)}
+          >
+            {author}
+          </button>
         </p>
       </div>
     </div>
