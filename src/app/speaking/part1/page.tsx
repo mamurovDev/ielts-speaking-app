@@ -25,7 +25,7 @@ export default async function Page() {
     const baseURL = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
 
     try {
-      const res = await fetch(`${baseURL}/api/speaking`);
+      const res = await fetch(`${baseURL}/api/speaking?refresh=true`);
       const data = await res.json();
       return data;
     } catch (error) {
@@ -44,7 +44,7 @@ export default async function Page() {
     return "";
   };
   return (
-    <ScrollArea className="relative flex flex-col items-center justify-center h-[90%] w-[40%] md:ml-64 sm:w-[95%] sm:self-center">
+    <ScrollArea className="relative flex flex-col items-center justify-center h-[90vh] w-[40%] md:ml-64 sm:w-[95%] sm:self-center">
       <h2 className="items-end flex justify-between text-3xl font-bold absolute top-0 left-0 w-full bg-black z-10 px-4 border-b-[1px] border-slate-800 p-2">
         Questions{" "}
         <span className="text-lg">{part1?.part1.length} questions</span>
