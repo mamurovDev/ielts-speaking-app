@@ -13,7 +13,6 @@ export const fetchQuestions = createAsyncThunk(
     const baseURL = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
     const response = await fetch(`${baseURL}/api/speaking?refresh=true`);
     const data = await response.json();
-    console.log("request sent!");
     return data;
   }
 );
