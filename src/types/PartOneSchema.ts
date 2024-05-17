@@ -7,6 +7,7 @@ export interface PartOneQuestions {
 }
 
 export interface QuestionItem {
+  _id: string;
   question: string;
   answer: string;
   ideas: string[];

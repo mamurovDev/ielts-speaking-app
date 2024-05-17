@@ -1,6 +1,12 @@
-import { Container, Select } from "@/components";
+"use client";
+
+import { Select } from "@/components";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { PartOneQuestions, QuestionItem } from "@/types";
+import { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { fetchQuestions } from "@/store/features/partOneSlice";
+import { AppDispatch } from "@/store/store";
 interface Part {
   questions: Question[];
   _id: string;
@@ -18,23 +24,9 @@ interface FetchedData {
   part1: Part[];
 }
 
-export default async function Page() {
-  const getPart1 = async (): Promise<
-    { part1: PartOneQuestions[] } | undefined
-  > => {
-    const baseURL = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
-
-    try {
-      const res = await fetch(`${baseURL}/api/speaking?refresh=true`);
-      const data = await res.json();
-      return data;
-    } catch (error) {
-      console.error(error + "error from c");
-    }
-  };
-
-  const part1 = await getPart1();
-
+export default function Page() {
+  const part1 = useSelector((state: any) => state.partOne.partOne);
+  const dispatch = useDispatch<AppDispatch>();
   const previewMaker = (questions: QuestionItem[]): string => {
     if (questions.length > 0) {
       return questions.length < 2
@@ -43,18 +35,22 @@ export default async function Page() {
     }
     return "";
   };
+
+  useEffect(() => {
+    dispatch(fetchQuestions());
+  }, [dispatch]);
+  console.log(part1[0]);
   return (
     <ScrollArea className="relative flex flex-col items-center justify-center h-[90vh] w-[40%] md:ml-64 sm:w-[100%]">
       <h2 className="items-end flex justify-between text-3xl font-bold absolute top-0 left-0 w-full bg-black z-10 px-4 border-b-[1px] border-slate-800 p-2">
-        Questions{" "}
-        <span className="text-lg">{part1?.part1.length} questions</span>
+        Questions <span className="text-lg">{part1?.length} questions</span>
       </h2>
       <div className="flex flex-col items-center justify-center w-full h-full mt-16">
-        {part1?.part1.map((part) => (
+        {part1.map((part: PartOneQuestions, index: number) => (
           <Select
             questionId={part._id}
             question={part?.name}
-            key={part?._id}
+            key={part?._id + part.name.trim() + index}
             author={part.author}
             lastUpdatedTime={part.lastUpdatedTime}
             preview={previewMaker(part.questions)}

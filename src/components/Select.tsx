@@ -1,13 +1,13 @@
 "use client";
 import { Badge } from "@/components/ui/badge";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { useDispatch, useSelector } from "react-redux";
 interface Question {
   question: string;
   author: string;
   lastUpdatedTime: string;
   preview: string;
-  questionId: string;
+  questionId: string | number;
 }
 
 export const Select = ({
@@ -26,20 +26,21 @@ export const Select = ({
       router.push("part1/" + questionId);
     }
   };
-
   return (
     <div
-      className="mt-2 flex sm:flex-col sm:h-32 text-white border-[1px] border-slate-800 rounded-lg w-[97%] sm:h-auto md:h-24 cursor-pointer bg-main justify-between"
+      className="mt-2 flex sm:flex-col  text-white border-[1px] border-slate-800 rounded-lg w-[97%] sm:h-auto md:h-24 cursor-pointer bg-main justify-between"
       onClick={(event) => handleRedirecter(event)}
     >
       <div className="flex flex-col ml-3 justify-center">
         <h3 className="sm:text-2xl md:text-3xl">{question}</h3>
-        <p className=" sm:text-sm md:text-xl md:w-[70%] sm:w-[99%]">{preview}</p>
+        <p className=" sm:text-sm  md:w-[70%] sm:w-[99%]">{preview}</p>
       </div>
       <div className="flex flex-col h-full mr-3 justify-center min-w-[190px]">
         <div className="w-full flex md:justify-between sm:justify-end">
           <Badge className="bg-orange-500">New!</Badge>
-          <time dateTime="2024-04-01 13:45" className="sm:ml-2">{lastUpdatedTime}</time>
+          <time dateTime="2024-04-01 13:45" className="sm:ml-2">
+            {lastUpdatedTime}
+          </time>
         </div>
         <p className="flex md:justify-between sm:justify-end">
           Author:{" "}
