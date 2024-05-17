@@ -28,7 +28,7 @@ export const Select = ({
   };
   return (
     <div
-      className="mt-2 flex sm:flex-col  text-white border-[1px] border-slate-800 rounded-lg w-[97%] sm:h-auto md:h-24 cursor-pointer bg-main justify-between"
+      className="mt-2 flex sm:flex-col md:flex-row  text-white border-[1px] border-slate-800 rounded-lg w-[97%] sm:min-h-16 sm:h-auto md:h-24 cursor-pointer bg-main justify-between"
       onClick={(event) => handleRedirecter(event)}
     >
       <div className="flex flex-col ml-3 justify-center">
@@ -36,13 +36,13 @@ export const Select = ({
         <p className=" sm:text-sm  md:w-[70%] sm:w-[99%]">{preview}</p>
       </div>
       <div className="flex flex-col h-full mr-3 justify-center min-w-[190px]">
-        <div className="w-full flex md:justify-between sm:justify-end">
+        <div className="w-full flex md:justify-between sm:hidden md:flex">
           <Badge className="bg-orange-500">New!</Badge>
           <time dateTime="2024-04-01 13:45" className="sm:ml-2">
             {lastUpdatedTime}
           </time>
         </div>
-        <p className="flex md:justify-between sm:justify-end">
+        <p className="flex md:justify-between sm:hidden md:flex">
           Author:{" "}
           <button
             className="text-orange-500 sm:ml-2"
