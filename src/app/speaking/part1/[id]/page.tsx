@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { fetchQuestions } from "@/store/features/partOneSlice";
 import { AppDispatch } from "@/store/store";
 import { PartOneQuestions } from "@/types";
+import { Question } from "@/components";
 
 export default function Page() {
   const finder = (part1: PartOneQuestions[], id: string) =>
@@ -26,11 +27,19 @@ export default function Page() {
         {question?.name}
         <span className="text-lg">{question?.questions.length} questions</span>
       </h2>
-      <div className="flex flex-col items-center justify-center w-full h-full mt-16">
+      <div className="flex flex-col  w-full h-full mt-16">
         {question?.questions && question?.questions.length > 0 ? (
           question?.questions.map((q, index) => (
             <div key={q._id + index}>
-              <h3>{q.question}</h3>
+              <Question
+                key={q._id + index}
+                _id={q._id}
+                answer={q.answer}
+                question={q.question}
+                ideas={q.ideas}
+                vocabulary={q.vocabulary}
+                order={q.order}
+              />
             </div>
           ))
         ) : (

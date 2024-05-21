@@ -8,6 +8,7 @@ export interface PartOneQuestions {
 
 export interface QuestionItem {
   _id: string;
+  order: number;
   question: string;
   answer: string;
   ideas: string[];

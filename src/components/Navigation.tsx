@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { GraduationCap, MessagesSquare, Speech } from "lucide-react";
 import { ScrollArea } from "@/components/ui/scroll-area";

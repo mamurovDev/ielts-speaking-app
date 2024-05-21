@@ -1,7 +1,6 @@
 "use client";
 import { Badge } from "@/components/ui/badge";
 import { useRouter } from "next/navigation";
-import { useDispatch, useSelector } from "react-redux";
 interface Question {
   question: string;
   author: string;

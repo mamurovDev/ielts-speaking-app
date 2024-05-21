@@ -20,10 +20,6 @@ interface Question {
   answer: string;
 }
 
-interface FetchedData {
-  part1: Part[];
-}
-
 export default function Page() {
   const part1 = useSelector((state: any) => state.partOne.partOne);
   const dispatch = useDispatch<AppDispatch>();
@@ -33,7 +29,7 @@ export default function Page() {
         ? questions[0].question
         : `${questions[0].question} and ${questions.length - 1} more`;
     }
-    return ""; 
+    return "";
   };
 
   useEffect(() => {
