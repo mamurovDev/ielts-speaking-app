@@ -2,7 +2,6 @@ import { QuestionItem } from "@/types";
 import { Badge, Button } from "./ui";
 import { randomColor } from "@/utils";
 
-
 export const Question = ({
   _id,
   answer,
@@ -16,13 +15,12 @@ export const Question = ({
       <div className="flex items-center">
         <Badge
           className={
-            "sm:ml-2 md:ml-3 rounded-full h-[50px] w-[50px] flex justify-center text-lg " +
-            randomColor(order)
+            "sm:mx-2 md:mx-3 rounded-full h-[50px] w-[50px] flex justify-center text-lg"
           }
         >
           {order}
         </Badge>
-        <h3 className="sm:text-sm md:text-xl ml-3 ">{question}</h3>
+        <h3 className="sm:text-sm md:text-xl">{question}</h3>
       </div>
       <Button className="h-10 md:mr-4 sm:mr-2">Learn more</Button>
     </div>

@@ -4,6 +4,7 @@ export interface PartOneQuestions {
   author: string;
   lastUpdatedTime: string;
   questions: QuestionItem[];
+  order: number;
 }
 
 export interface QuestionItem {

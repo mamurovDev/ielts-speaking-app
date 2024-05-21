@@ -43,6 +43,7 @@ export default function Page() {
       <div className="flex flex-col items-center justify-center w-full h-full mt-16">
         {part1.map((part: PartOneQuestions, index: number) => (
           <Select
+            order={part.order}
             questionId={part._id}
             question={part?.name}
             key={part?._id + part.name.trim() + index}
