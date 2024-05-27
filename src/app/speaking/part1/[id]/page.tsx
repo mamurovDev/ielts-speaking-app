@@ -14,7 +14,7 @@ export default function Page() {
 
   const { id } = useParams();
   const dispatch = useDispatch<AppDispatch>();
-  const part1 = useSelector((state: any) => state.partOne.partOne);
+  const part1 = useSelector((state: any) => state.partOne.part1);
   const question = finder(part1, Array.isArray(id) ? id[0] : id);
   useEffect(() => {
     if (part1.length === 0) {
@@ -22,7 +22,7 @@ export default function Page() {
     }
   });
   return (
-    <ScrollArea className=" relative flex flex-col items-center justify-center h-[90vh] w-[40%] md:ml-64 sm:w-[100%]">
+    <ScrollArea className=" relative flex flex-col items-center justify-center md:h-[90vh] w-[40%] sm:w-[100%]">
       <h2 className="items-end flex justify-between text-3xl font-bold absolute top-0 left-0 w-full bg-black z-10 px-4 border-b-[1px] border-slate-800 p-2">
         {question?.name}
         <span className="text-lg">{question?.questions.length} questions</span>

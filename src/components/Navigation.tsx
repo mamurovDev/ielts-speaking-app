@@ -21,19 +21,16 @@ export const Navigation = async () => {
           <NavigationButton
             name="Part 1"
             icon={<GraduationCap className="mr-2" />}
-            quantityOfQuestions={45}
             route="part1"
           />
           <NavigationButton
             name="Part 2"
             icon={<MessagesSquare className="mr-2" />}
-            quantityOfQuestions={45}
             route="part2"
           />
           <NavigationButton
             name="Part 3"
             icon={<Speech className="mr-2" />}
-            quantityOfQuestions={45}
             route="part3"
           />
         </div>

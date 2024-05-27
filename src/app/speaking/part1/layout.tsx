@@ -1,3 +1,3 @@
 export default function Page({ children }: React.PropsWithChildren<{}>) {
-  return <div>{children}</div>;
+  return <div className="mx-auto max-w-[90%]">{children}</div>;
 }

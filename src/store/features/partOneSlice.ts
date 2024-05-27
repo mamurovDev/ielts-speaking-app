@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
 import { PartOneQuestions } from "@/types";
 
 const initialState = {
-  partOne: [] as PartOneQuestions[],
+  part1: [] as PartOneQuestions[],
   status: "idle",
   error: null as string | null | undefined,
 };
@@ -22,12 +22,12 @@ export const partOneSlice = createSlice({
   initialState,
   reducers: {
     addPartOne: (state, action: PayloadAction<PartOneQuestions[]>) => {
-      state.partOne.push(...action.payload);
+      state.part1.push(...action.payload);
     },
   },
   extraReducers: (builder) => {
     builder.addCase(fetchQuestions.fulfilled, (state, action) => {
-      state.partOne = action.payload.part1;
+      state.part1 = action.payload.part1;
     });
     builder.addCase(fetchQuestions.rejected, (state, action) => {
       console.log(action.error.message);

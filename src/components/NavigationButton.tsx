@@ -1,17 +1,18 @@
+"use client"
 import Link from "next/link";
 import { Button } from "./ui/button";
+import { useSelector } from "react-redux";
 interface NavigationButton {
   route: string;
   name: string;
-  quantityOfQuestions: number;
   icon: React.ReactNode;
 }
 export const NavigationButton = ({
   route,
   name,
-  quantityOfQuestions,
   icon,
 }: NavigationButton) => {
+  const numberOfQuestions: number = useSelector((state: any) => state?.partOne[route]?.length) || 0;
   return (
     <Link href={`/speaking/${route}`} className="w-[95%]">
       <Button className="mt-2 w-full justify-between items-center">
@@ -19,7 +20,7 @@ export const NavigationButton = ({
           {icon}
           {name}
         </div>
-        {quantityOfQuestions}
+        {numberOfQuestions}
       </Button>
     </Link>
   );
