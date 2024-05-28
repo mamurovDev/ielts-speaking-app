@@ -23,9 +23,9 @@ export default function Page() {
   });
   return (
     <ScrollArea className=" relative flex flex-col items-center justify-center md:h-[90vh] w-[40%] sm:w-[100%]">
-      <h2 className="items-end flex justify-between text-3xl font-bold absolute top-0 left-0 w-full bg-black z-10 px-4 border-b-[1px] border-slate-800 p-2">
+      <h2 className="items-end flex justify-between sm:text-2xl md:text-3xl font-bold absolute top-0 left-0 w-full bg-black z-10 px-4 border-b-[1px] border-slate-800 p-2">
         {question?.name}
-        <span className="text-lg">{question?.questions.length} questions</span>
+        <span className="sm:text-base md:text-lg">{question?.questions.length} questions</span>
       </h2>
       <div className="flex flex-col  w-full h-full mt-16">
         {question?.questions && question?.questions.length > 0 ? (

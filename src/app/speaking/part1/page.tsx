@@ -59,11 +59,11 @@ export default function Page() {
         robotsMetaTag="index, follow"
       />
       <ScrollArea className="relative flex flex-col items-center justify-center md:h-[90vh] w-[40%] sm:w-[100%]">
-        <h2 className="items-end flex justify-between text-3xl font-bold absolute top-0 left-0 w-full bg-black z-10 px-4 border-b-[1px] border-slate-800 p-2">
-          Questions <span className="text-lg">{part1?.length} questions</span>
+        <h2 className="items-end flex justify-between sm:text-2xl md:text-3xl font-bold absolute top-0 left-0 w-full bg-black z-10 px-4 border-b-[1px] border-slate-800 p-2">
+          Questions <span className="md:text-lg sm:text-base">{part1?.length} questions</span>
         </h2>
         <div className="flex flex-col items-center justify-center w-full h-full mt-16">
-          {part1.map((part: PartOneQuestions, index: number) => (
+          {part1?.map((part: PartOneQuestions, index: number) => (
             <Select
               order={part.order}
               questionId={part._id}
