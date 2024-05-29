@@ -23,11 +23,11 @@ export async function POST(request: any) {
 export async function GET() {
   try {
     await connectMongodb();
-    const part1 = await Part1.find().sort({ createdAt: -1 }); // Assuming there's a createdAt field
+    const part1 = await Part1.find(); // Assuming there's a createdAt field
 
     return NextResponse.json(
       { part1 },
-      { headers: { "Cache-Control": "no-cache" } }
+      { headers: { "Cache-Control": "max-age=3600" } }
     );
   } catch (error) {
     console.log(error);

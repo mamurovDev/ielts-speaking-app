@@ -1,6 +1,5 @@
 import { QuestionItem } from "@/types";
 import { Badge, Button } from "./ui";
-import { randomColor } from "@/utils";
 
 export const Question = ({
   _id,
@@ -22,7 +21,7 @@ export const Question = ({
         </Badge>
         <h3 className="sm:text-sm md:text-xl">{question}</h3>
       </div>
-      <Button className="h-10 md:mr-4 sm:mr-2">Learn more</Button>
+      <Button className="md:mr-4 sm:mr-2 sm:text-xs md:text-sm">Learn more</Button>
     </div>
   );
 };

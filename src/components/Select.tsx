@@ -43,7 +43,7 @@ export const Select = ({
         </Badge>
         <div className="flex w-full sm:flex-col md:flex-row justify-between">
           <div className="flex flex-col justify-center">
-            <h3 className="sm:text-1xl md:text-2xl">{question}</h3>
+            <h3 className="sm:text-1xl md:text-2xl sm:font-semibold md:font-normal">{question}</h3>
             <p className=" sm:text-sm  md:w-[70%] sm:w-[99%]">{preview}</p>
           </div>
           <div className="flex flex-col h-full mr-4 justify-center min-w-[190px]">
