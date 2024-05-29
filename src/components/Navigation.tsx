@@ -3,7 +3,7 @@ import { GraduationCap, MessagesSquare, Speech } from "lucide-react";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { NavigationButton } from "./NavigationButton";
 
-export const Navigation = async () => {
+export const Navigation = () => {
   return (
     <aside className="h-screen sm:hidden md:flex ml-3">
       <ScrollArea className=" flex-col h-[90%] w-72 border-[1px] border-slate-800 rounded-lg self-center items-center bg-main">
@@ -16,7 +16,7 @@ export const Navigation = async () => {
         </div>
         <hr className="w-[92%] border-slate-700 mt-2" />
         <div className="mt-8 flex flex-col w-full items-center">
-          <h2 className="font-bold self-start ml-2 text-3xl">Speaking</h2>
+          <h2 className="self-start ml-2 text-3xl">Speaking</h2>
 
           <NavigationButton
             name="Part 1"
