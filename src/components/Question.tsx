@@ -1,6 +1,8 @@
+"use client"
 import { QuestionItem } from "@/types";
 import { Badge, Button } from "./ui";
-
+import { useRouter } from "next/navigation";
+import { useParams } from "next/navigation";
 export const Question = ({
   _id,
   answer,
@@ -9,8 +11,19 @@ export const Question = ({
   vocabulary,
   order,
 }: QuestionItem) => {
+  const router = useRouter();
+  const { id } = useParams();
+  console.log(id)
+
+  const handleRedirecter = (event: React.MouseEvent<HTMLElement>) => {
+    event.preventDefault();
+    router.push(id + "/" + _id)
+  };
+
   return (
-    <div className="mt-2 flex items-center border-slate-800 rounded-lg sm:min-h-16 sm:h-auto md:h-24 cursor-pointer bg-main justify-between">
+    <div className="mt-2 flex items-center rounded-lg sm:min-h-16 sm:h-auto md:h-24 cursor-pointer bg-main justify-between"
+      onClick={(e) => { handleRedirecter(e) }}
+    >
       <div className="flex items-center">
         <Badge
           className={

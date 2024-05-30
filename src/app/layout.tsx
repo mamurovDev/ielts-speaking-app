@@ -5,6 +5,7 @@ import "./globals.css";
 import { Inter as FontSans } from "next/font/google";
 import RouteReminder from "@/components/RoteTracker";
 import StoreProvider from "./StorePrivider";
+import { ThemeProvider } from "@/components";
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
@@ -30,7 +31,13 @@ export default function RootLayout({
             fontSans.variable +
             " flex items-center bg-black font-sans  text-white "
           }>
-          {children}
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange>
+            {children}
+          </ThemeProvider>
         </body>
       </html>
     </StoreProvider >

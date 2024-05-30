@@ -7,8 +7,6 @@ import {
     CardHeader,
     CardTitle,
 } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
 import {
     Tabs,
     TabsContent,
@@ -25,10 +23,10 @@ export default function Page() {
                 <TabsTrigger value="answer">Answer</TabsTrigger>
             </TabsList>
             <TabsContent value="vocabulary" >
-                <Card className="bg-main border-none">
+                <Card className="">
                     <CardHeader>
-                        <CardTitle className="text-white">Vocabulary</CardTitle>
-                        <CardDescription className="text-stone-400" >
+                        <CardTitle className="">Vocabulary</CardTitle>
+                        <CardDescription className="" >
                             Here you can get some vocabulary to help you with your answer.
                         </CardDescription>
                     </CardHeader>
@@ -37,7 +35,6 @@ export default function Page() {
                             <li>First word</li>
                             <li>Second word</li>
                             <li>Third word</li>
-
                         </ul>
                     </CardContent>
                 </Card>

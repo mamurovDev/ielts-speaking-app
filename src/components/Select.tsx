@@ -35,7 +35,7 @@ export const Select = ({
   return (
     <>
       <div
-        className="mt-2 flex items-center  text-white rounded-lg w-full sm:min-h-16 sm:h-auto md:h-24 cursor-pointer bg-main"
+        className="mt-2 flex items-center rounded-lg w-full sm:min-h-16 sm:h-auto md:h-24 cursor-pointer bg-main"
         onClick={(event) => handleRedirecter(event)}
       >
         <Badge className="sm:mx-2 md:mx-3 rounded-full h-[50px] w-[50px] flex justify-center text-lg items-center">
@@ -48,7 +48,7 @@ export const Select = ({
           </div>
           <div className="flex flex-col h-full mr-4 justify-center min-w-[190px]">
             <div className="w-full flex md:justify-between sm:hidden md:flex">
-              <Badge className="bg-orange-500">New!</Badge>
+              <Badge className="">New!</Badge>
               <time dateTime="2024-04-01 13:45" className="sm:ml-2">
                 {lastUpdatedTime}
               </time>

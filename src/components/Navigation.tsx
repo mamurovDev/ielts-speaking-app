@@ -2,17 +2,21 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { GraduationCap, MessagesSquare, Speech } from "lucide-react";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { NavigationButton } from "./NavigationButton";
-
+import { ModeToggle } from "./ModeToggler";
 export const Navigation = () => {
   return (
     <aside className="h-screen sm:hidden md:flex ml-3">
-      <ScrollArea className=" flex-col h-[90%] w-72 border-[1px] border-slate-800 rounded-lg self-center items-center bg-main">
+      <ScrollArea className=" flex-col h-[90%] w-72 rounded-lg self-center items-center bg-main">
         <div className="w-[95%] flex items-center mt-2">
           <Avatar className="ml-2">
             <AvatarImage src="https://github.com/shadcn.png" />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
           <p className="ml-2">Nurmuhammad</p>
+          <p className="mx-auto">
+            <ModeToggle />
+          </p>
+
         </div>
         <hr className="w-[92%] border-slate-700 mt-2" />
         <div className="mt-8 flex flex-col w-full items-center">
