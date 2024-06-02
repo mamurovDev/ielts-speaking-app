@@ -27,7 +27,7 @@ export async function GET() {
 
     return NextResponse.json(
       { part1 },
-      { headers: { "Cache-Control": "max-age=3600" } }
+      { headers: { "Cache-Control": "max-age=86400" } }
     );
   } catch (error) {
     console.log(error);
