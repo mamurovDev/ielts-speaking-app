@@ -4,7 +4,7 @@ import { RootState } from "@/store/store"; // Adjust the import according to you
 import { createSelector } from "reselect";
 const initialState = {
   part1: [] as PartOneQuestions[],
-  status: "idle",
+  status: "idle" as "idle" | "loading" | "succeeded" | "failed",
   error: null as string | null | undefined,
 };
 

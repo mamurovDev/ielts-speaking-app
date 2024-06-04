@@ -15,7 +15,7 @@ export const NavigationButton = ({
   const numberOfQuestions: number = useSelector((state: any) => state?.partOne[route]?.length) || 0;
   return (
     <Link href={`/speaking/${route}`} className="w-[95%]" >
-      <Button className="mt-2 w-full justify-between items-center">
+      <Button className="mt-2 w-full justify-between items-center" >
         <div className="flex">
           {icon}
           {name}

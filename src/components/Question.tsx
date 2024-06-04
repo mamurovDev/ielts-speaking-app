@@ -13,7 +13,6 @@ export const Question = ({
 }: QuestionItem) => {
   const router = useRouter();
   const { id } = useParams();
-  console.log(id)
 
   const handleRedirecter = (event: React.MouseEvent<HTMLElement>) => {
     event.preventDefault();
