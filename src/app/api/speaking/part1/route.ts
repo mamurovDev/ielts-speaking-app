@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
-import connectMongodb from "../../../libs/mongodb";
-import Part1 from "../../../models/part1";
+import connectMongodb from "../../../../libs/mongodb";
+import Part1 from "../../../../models/part1";
 
 export async function POST(request: any) {
   const { vocabulary, questions, answers, author } = await request.json();
@@ -23,7 +23,7 @@ export async function POST(request: any) {
 export async function GET() {
   try {
     await connectMongodb();
-    const part1 = await Part1.find(); // Assuming there's a createdAt field
+    const part1 = await Part1.find(); 
 
     return NextResponse.json(
       { part1 },

@@ -31,7 +31,7 @@ export const Question = ({
         >
           {order}
         </Badge>
-        <h3 className="sm:text-sm md:text-xl">{question}</h3>
+        <h3 className="sm:text-sm md:text-xl sm:w-[80%] md:w-auto">{question}</h3>
       </div>
       <Button className="md:mr-4 sm:mr-2 sm:text-xs md:text-sm">Learn more</Button>
     </div>

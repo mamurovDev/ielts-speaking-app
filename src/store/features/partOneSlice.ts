@@ -12,7 +12,7 @@ export const fetchQuestions = createAsyncThunk(
   "partOne/fetchQuestions",
   async () => {
     const baseURL = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
-    const response = await fetch(`${baseURL}/api/speaking`);
+    const response = await fetch(`${baseURL}/api/speaking/part1`);
     const data = await response.json();
     return data;
   }

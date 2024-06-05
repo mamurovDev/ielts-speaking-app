@@ -8,7 +8,6 @@ import {
     Card,
     CardContent,
     CardDescription,
-    CardFooter,
     CardHeader,
     CardTitle,
 } from "@/components/ui/card"
@@ -18,8 +17,25 @@ import {
     TabsList,
     TabsTrigger,
 } from "@/components/ui/tabs"
+import { Skeleton } from "@/components/ui";
 
 export default function Page() {
+
+    const renderContent = (status: string, vocabulary?: string[]) => {
+        if (status !== "succeeded") {
+            return Array.from({ length: 3 }).map((_, index) => (
+                <li key={index}>
+                    <Skeleton className="h-3 w-36 mb-2 bg-white" />
+                </li>
+            ));
+        } else {
+            return (vocabulary || []).map((word) => (
+                <li key={word}>{word}</li>
+            ));
+        }
+    };
+
+    const status = useSelector((state: RootState) => state.partOne.status);
     const { id, question } = useParams<{ id: string | string[], question: string }>();
     const partId = Array.isArray(id) ? id[0] : id;
     const questionId = Array.isArray(question) ? question[0] : question;
@@ -29,9 +45,12 @@ export default function Page() {
     }, [dispatch]);
     const foundQuestion = useSelector((state: RootState) => selectQuestionsByPartId(state, partId, questionId));
     return (
-        <div className="mx-auto md:w-[500px] sm:w-[80%]">
-            <h2 className="sm:mt-20 md:m-0">{foundQuestion.title}</h2>
-            <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight my-5">{foundQuestion.question}</h3>
+        <div className="mx-auto md:w-[500px] sm:w-[90%]">
+            <h2 className="sm:mt-20 md:m-0">{foundQuestion.title || <Skeleton className="h-4 w-20 mb-2" />}</h2>
+            <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight my-5">{foundQuestion.question || <Skeleton className="h-5 w-56 mb-2" />
+
+            }</h3>
+
             <Tabs defaultValue="vocabulary" className="md:w-[500px]">
                 <TabsList className="grid w-full grid-cols-3 bg-main">
                     <TabsTrigger value="vocabulary" className="">Vocabulary</TabsTrigger>
@@ -48,7 +67,7 @@ export default function Page() {
                         </CardHeader>
                         <CardContent className="space-y-2">
                             <ul className="my-6 ml-6 list-disc [&>li]:mt-2">
-                                {foundQuestion.vocabulary?.map((word: string) => <li key={word}>{word}</li>)}
+                                {renderContent(status, foundQuestion.vocabulary)}
                             </ul>
                         </CardContent>
                     </Card>
@@ -63,7 +82,7 @@ export default function Page() {
                         </CardHeader>
                         <CardContent className="space-y-2">
                             <ul className="my-6 ml-6 list-disc [&>li]:mt-2">
-                                {foundQuestion.ideas?.map((idea: string) => <li key={idea}>{idea}</li>)}
+                                {renderContent(status, foundQuestion.ideas)}
                             </ul>
                         </CardContent>
 
