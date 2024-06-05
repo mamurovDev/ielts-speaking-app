@@ -29,7 +29,7 @@ export default function Page() {
     }, [dispatch]);
     const foundQuestion = useSelector((state: RootState) => selectQuestionsByPartId(state, partId, questionId));
     return (
-        <div className="">
+        <div className="mx-auto md:w-[500px] sm:w-[80%]">
             <h2 className="sm:mt-20 md:m-0">{foundQuestion.title}</h2>
             <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight my-5">{foundQuestion.question}</h3>
             <Tabs defaultValue="vocabulary" className="md:w-[500px]">
