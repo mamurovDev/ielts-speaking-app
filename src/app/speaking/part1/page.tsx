@@ -66,7 +66,6 @@ export default function Page() {
         <div className="flex flex-col items-center justify-center w-full h-full mt-16">
 
 
-          <CustomSkeleton />
 
           {status === "succeeded" ? part1?.map((part: PartOneQuestions, index: number) => (
             <Select
