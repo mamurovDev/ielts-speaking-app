@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
-import connectMongodb from "../../../../libs/mongodb";
-import Part1 from "../../../../models/part1";
+import connectMongodb from "@/libs/mongodb";
+import Part1 from "@/models/part1";
 
 export async function POST(request: any) {
   const { vocabulary, questions, answers, author } = await request.json();

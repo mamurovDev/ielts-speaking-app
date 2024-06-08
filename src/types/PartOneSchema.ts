@@ -1,13 +1,13 @@
-export interface PartOneQuestions {
+export type PartOneQuestions = {
   _id: string;
   name: string;
   author: string;
   lastUpdatedTime: string;
   questions: QuestionItem[];
   order: number;
-}
+};
 
-export interface QuestionItem {
+export type QuestionItem = {
   _id: string;
   order: number;
   question: string;
