@@ -1,6 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-
+import { Toaster } from "@/components/ui/sonner";
 import { Inter as FontSans } from "next/font/google";
 import StoreProvider from "./StorePrivider";
 import { ThemeProvider } from "@/components";
@@ -42,6 +42,7 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange>
             {children}
+            <Toaster />
           </ThemeProvider>
         </body>
       </html>

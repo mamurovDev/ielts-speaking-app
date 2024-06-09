@@ -23,7 +23,7 @@ export async function POST(request: any) {
 export async function GET() {
   try {
     await connectMongodb();
-    const part1 = await Part1.find(); 
+    const part1 = await Part1.find().sort({ order: 1 });
 
     return NextResponse.json(
       { part1 },

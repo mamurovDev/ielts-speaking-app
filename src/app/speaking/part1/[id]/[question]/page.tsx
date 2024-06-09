@@ -4,13 +4,15 @@ import { useParams } from "next/navigation";
 import { fetchQuestions, selectQuestionsByPartId } from "@/store/features/partOneSlice";
 import { useEffect } from "react";
 import { AppDispatch, RootState } from "@/store/store";
+import { toast } from "sonner";
 import {
     Card,
     CardContent,
     CardDescription,
     CardHeader,
     CardTitle,
-} from "@/components/ui/card"
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import {
     Tabs,
     TabsContent,
@@ -44,8 +46,14 @@ export default function Page() {
         dispatch(fetchQuestions());
     }, [dispatch]);
     const foundQuestion = useSelector((state: RootState) => selectQuestionsByPartId(state, partId, questionId));
+
+    const copyToClipboard = () => {
+        navigator.clipboard.writeText(window.location.href);
+        toast("Link copied to clipboard");
+    }
+
     return (
-        <div className="mx-auto md:w-[500px] sm:w-[90%]">
+        <div className=" flex flex-col mx-auto md:w-[500px] sm:w-[90%]">
             <h2 className="sm:mt-20 md:m-0">{foundQuestion.title || <Skeleton className="h-4 w-20 mb-2" />}</h2>
             <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight my-5">{foundQuestion.question || <Skeleton className="h-5 w-56 mb-2" />
 
@@ -102,6 +110,7 @@ export default function Page() {
                     </Card>
                 </TabsContent>
             </Tabs>
+            <Button className="self-center mt-5" onClick={copyToClipboard}>Share</Button>
         </div>
     )
 }
