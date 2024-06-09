@@ -31,7 +31,7 @@ export const Select = ({
 
   };
 
-  const handleShare = (e) => {
+  const handleShare = (e: React.MouseEvent<HTMLButtonElement>) => {
     e?.stopPropagation();
     navigator.clipboard.writeText(window.location.href + "/" + questionId);
     toast("Link copied to clipboard");
