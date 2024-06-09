@@ -3,6 +3,7 @@ import { QuestionItem } from "@/types";
 import { Badge, Button } from "./ui";
 import { useRouter } from "next/navigation";
 import { useParams } from "next/navigation";
+import { toast } from "sonner";
 export const Question = ({
   _id,
   answer,
@@ -34,6 +35,6 @@ export const Question = ({
         <h3 className="sm:text-sm md:text-xl sm:w-[80%] md:w-auto">{question}</h3>
       </div>
       <Button className="md:mr-4 sm:mr-2 sm:text-xs md:text-sm">Learn more</Button>
-    </div>
+    </div >
   );
 };

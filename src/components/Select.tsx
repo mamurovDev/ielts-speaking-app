@@ -1,7 +1,9 @@
 "use client";
 import { Badge } from "@/components/ui/badge";
 import { useRouter } from "next/navigation";
+import { Button } from "@/components/ui/button";
 import { SEO } from "./SEO";
+import { toast } from "sonner";
 interface Question {
   question: string;
   author: string;
@@ -24,13 +26,16 @@ export const Select = ({
 
   const handleRedirecter = (event: React.MouseEvent<HTMLElement>) => {
     event.preventDefault();
-    if (event.target instanceof HTMLButtonElement) {
-      router.push("/user/" + author);
-    } else {
-      router.push("part1/" + questionId);
-    }
+
+    router.push("part1/" + questionId);
+
   };
 
+  const handleShare = (e) => {
+    e?.stopPropagation();
+    navigator.clipboard.writeText(window.location.href + "/" + questionId);
+    toast("Link copied to clipboard");
+  }
 
   return (
     <>
@@ -46,24 +51,9 @@ export const Select = ({
             <h3 className="sm:text-1xl md:text-2xl sm:font-semibold md:font-normal">{question}</h3>
             <p className=" sm:text-sm  md:w-[70%] sm:w-[99%]">{preview}</p>
           </div>
-          <div className="flex flex-col h-full mr-4 justify-center min-w-[190px]">
-            <div className="w-full flex md:justify-between sm:hidden md:flex">
-              <Badge className="">New!</Badge>
-              <time dateTime="2024-04-01 13:45" className="sm:ml-2">
-                {lastUpdatedTime}
-              </time>
-            </div>
-            <p className="flex md:justify-between sm:hidden md:flex">
-              Author:{" "}
-              <button
-                className="text-orange-500 sm:ml-2"
-                onClick={(event) => handleRedirecter(event)}
-              >
-                {author}
-              </button>
-            </p>
-          </div>
+
         </div>
+        <Button className="mr-3" onClick={(e) => handleShare(e)}>Share</Button>
       </div></>
   );
 };
