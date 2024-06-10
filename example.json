@@ -1,0 +1,66 @@
+{
+  "_id": "djis89uf8j9idjefj9efj9",
+  "name": "Enjoyable Daily Routines",
+  "question": "Describe a daily routine that you enjoy.",
+  "order": 1,
+  "points": [
+    {
+      "_id": "6091a7835e1a1424b836f9a1",
+      "question": "What do you do?",
+      "answers": [
+        "I wake up early every morning and practice yoga to start my day with positive energy.",
+        "In the afternoon, I take a brisk walk in the park to refresh my mind and body.",
+        "During the evening, I enjoy cooking dinner while listening to my favorite music.",
+        "Before bedtime, I like to unwind by reading a good book or watching an interesting documentary."
+      ]
+    },
+    {
+      "_id": "6091a7845e1a1424b836f9a2",
+      "question": "When did it become your daily routine?",
+      "answers": [
+        "I began practicing yoga every morning during my college years, and it has since become an integral part of my daily routine.",
+        "My afternoon walks started when I moved to a new city and discovered the beautiful park nearby.",
+        "Cooking dinner every evening became a habit when I started living on my own after graduation.",
+        "Reading before bedtime has been a lifelong habit that I inherited from my parents."
+      ]
+    },
+    {
+      "_id": "6091a7845e1a1424b836f9a3",
+      "question": "Will you change it in the future?",
+      "answers": [
+        "I don't foresee any changes in my daily routines as they contribute to my overall well-being and happiness.",
+        "While I'm open to new experiences, I believe these routines will remain unchanged for the foreseeable future.",
+        "My daily rituals are deeply ingrained, and I see no reason to alter them anytime soon."
+      ]
+    },
+    {
+      "_id": "6091a7845e1a1424b836f9a4",
+      "question": "Why do you enjoy it?",
+      "answers": [
+        "I enjoy practicing yoga because it helps me stay centered and reduces stress levels throughout the day.",
+        "Taking walks in the park allows me to connect with nature and clear my mind from daily worries.",
+        "Cooking dinner is a creative outlet for me, and I find joy in experimenting with new recipes and flavors.",
+        "Reading before bedtime is a calming activity that helps me unwind and escape into different worlds."
+      ]
+    }
+  ],
+  "vocabulary": [
+    "routine",
+    "enjoy",
+    "habit",
+    "daily",
+    "change",
+    "future",
+    "integral",
+    "well-being",
+    "happiness",
+    "centered",
+    "stress",
+    "calming"
+  ],
+  "answers": [
+    "My morning yoga sessions and afternoon walks are integral parts of my daily routine, contributing to my overall well-being and happiness. I don't anticipate any changes in these habits as they help me stay centered and reduce stress levels.",
+    "Cooking dinner every evening has become a cherished habit that brings me joy and allows me to express my creativity in the kitchen. While I'm open to new experiences, I don't plan on altering this routine in the near future.",
+    "Reading before bedtime is a calming ritual that I've enjoyed since childhood. It helps me unwind and escape into different worlds, making it an essential part of my daily life."
+  ]
+}

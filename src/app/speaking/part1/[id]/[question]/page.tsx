@@ -37,16 +37,17 @@ const renderContent = (status: string, vocabulary?: string[]) => {
 export default function Page() {
     const status = useSelector((state: RootState) => state.partOne.status);
     const part1 = useSelector((state: RootState) => state.partOne.part1);
-    const foundQuestion = useSelector((state: RootState) => selectQuestionsByPartId(state, partId, questionId));
-
+    
     const { id, question } = useParams<{ id: string | string[], question: string }>();
     const partId = Array.isArray(id) ? id[0] : id;
     const questionId = Array.isArray(question) ? question[0] : question;
+    const foundQuestion = useSelector((state: RootState) => selectQuestionsByPartId(state, partId, questionId));    
     const dispatch = useDispatch<AppDispatch>();
     useEffect(() => {
         part1.length === 0 && dispatch(fetchQuestions());
     }, [part1]);
-    
+
+
 
     const copyToClipboard = () => {
         navigator.clipboard.writeText(window.location.href);

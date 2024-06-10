@@ -38,7 +38,7 @@ export default function Page() {
 
   const { id } = useParams();
   const dispatch = useDispatch<AppDispatch>();
-  const part1 = useSelector((state: RootState) => state.partOne.part1);
+  const part1: PartOneQuestions[] = useSelector((state: RootState) => state.partOne.part1);
   const status = useSelector((state: RootState) => state.partOne.status);
   const question = finder(part1, Array.isArray(id) ? id[0] : id);
   useEffect(() => {

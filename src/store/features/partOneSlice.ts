@@ -8,6 +8,7 @@ type TInitialState = {
   error: string | null | undefined;
 };
 const initialState: TInitialState = {
+
   part1: [],
   status: "idle",
   error: null,
