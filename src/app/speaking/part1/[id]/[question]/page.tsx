@@ -45,7 +45,7 @@ export default function Page() {
     const dispatch = useDispatch<AppDispatch>();
     useEffect(() => {
         part1.length === 0 && dispatch(fetchQuestions());
-    }, []);
+    }, [part1]);
     
 
     const copyToClipboard = () => {
