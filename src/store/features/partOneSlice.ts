@@ -1,11 +1,16 @@
 import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
 import { PartOneQuestions, QuestionItem } from "@/types";
 import { RootState } from "@/store/store"; // Adjust the import according to your store configuration
-import { createSelector } from "reselect";
-const initialState = {
-  part1: [] as PartOneQuestions[],
-  status: "idle" as "idle" | "loading" | "succeeded" | "failed",
-  error: null as string | null | undefined,
+
+type TInitialState = {
+  part1: PartOneQuestions[];
+  status: 'idle' | 'loading' | 'succeeded' | 'failed';
+  error: string | null | undefined;
+};
+const initialState: TInitialState = {
+  part1: [],
+  status: "idle",
+  error: null,
 };
 
 export const fetchQuestions = createAsyncThunk(

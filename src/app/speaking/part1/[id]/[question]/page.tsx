@@ -20,32 +20,33 @@ import {
     TabsTrigger,
 } from "@/components/ui/tabs"
 import { Skeleton } from "@/components/ui";
+const renderContent = (status: string, vocabulary?: string[]) => {
+    if (status !== "succeeded") {
+        return Array.from({ length: 3 }).map((_, index) => (
+            <li key={index}>
+                <Skeleton className="h-3 w-36 mb-2 bg-white" />
+            </li>
+        ));
+    } else {
+        return (vocabulary || []).map((word) => (
+            <li key={word}>{word}</li>
+        ));
+    }
+};
 
 export default function Page() {
-
-    const renderContent = (status: string, vocabulary?: string[]) => {
-        if (status !== "succeeded") {
-            return Array.from({ length: 3 }).map((_, index) => (
-                <li key={index}>
-                    <Skeleton className="h-3 w-36 mb-2 bg-white" />
-                </li>
-            ));
-        } else {
-            return (vocabulary || []).map((word) => (
-                <li key={word}>{word}</li>
-            ));
-        }
-    };
-
     const status = useSelector((state: RootState) => state.partOne.status);
+    const part1 = useSelector((state: RootState) => state.partOne.part1);
+    const foundQuestion = useSelector((state: RootState) => selectQuestionsByPartId(state, partId, questionId));
+
     const { id, question } = useParams<{ id: string | string[], question: string }>();
     const partId = Array.isArray(id) ? id[0] : id;
     const questionId = Array.isArray(question) ? question[0] : question;
     const dispatch = useDispatch<AppDispatch>();
     useEffect(() => {
-        dispatch(fetchQuestions());
-    }, [dispatch]);
-    const foundQuestion = useSelector((state: RootState) => selectQuestionsByPartId(state, partId, questionId));
+        part1.length === 0 && dispatch(fetchQuestions());
+    }, []);
+    
 
     const copyToClipboard = () => {
         navigator.clipboard.writeText(window.location.href);
