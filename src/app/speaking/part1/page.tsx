@@ -6,14 +6,18 @@ import { PartOneQuestions, QuestionItem } from "@/types";
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchQuestions } from "@/store/features/partOneSlice";
-import { AppDispatch } from "@/store/store";
+import { AppDispatch, RootState } from "@/store/store";
 import { CustomSkeleton } from "@/components/CustomSkeleton";
 
 
 export default function Page() {
-  const part1 = useSelector((state: any) => state.partOne.part1);
-  const status = useSelector((state: any) => state.partOne.status);
+  const part1 = useSelector((state: RootState) => state.partOne.part1);
+  const status = useSelector((state: RootState) => state.partOne.status);
   const dispatch = useDispatch<AppDispatch>();
+
+  useEffect(() => {
+    dispatch(fetchQuestions());
+  }, []);
 
   const previewMaker = (questions: QuestionItem[]): string => {
     if (questions.length > 0) {
@@ -44,12 +48,8 @@ export default function Page() {
         />
       ))
     }
-
   }
 
-  useEffect(() => {
-    dispatch(fetchQuestions());
-  }, [dispatch]);
   return (
     <>
       <ScrollArea className="relative flex flex-col items-center justify-center md:h-[90vh] md:w-[60%] sm:w-[95%] sm:mx-auto">
