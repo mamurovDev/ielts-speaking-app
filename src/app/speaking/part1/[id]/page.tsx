@@ -2,7 +2,7 @@
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { useParams } from "next/navigation";
 import { useSelector, useDispatch } from "react-redux";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { fetchQuestions } from "@/store/features/partOneSlice";
 import { AppDispatch, RootState } from "@/store/store";
 import { PartOneQuestions, QuestionItem } from "@/types";
@@ -10,32 +10,31 @@ import { Question } from "@/components";
 import { CustomSkeleton } from "@/components/CustomSkeleton";
 import { Skeleton } from "@/components/ui";
 
-export default function Page() {
-  const finder = (part1: PartOneQuestions[], id: string) => {
-    return part1.find((part) => part._id === id);
-  };
+const finder = (part1: PartOneQuestions[], id: string) => {
+  return part1.find((part) => part._id === id);
+};
 
-  const renderContent = (status: string, questions: QuestionItem[]) => {
-    if (status !== "succeeded") {
-      return Array.from({ length: 10 }).map((_, index) => (
-        <CustomSkeleton key={index} />
-      ));
-    } else {
-      return questions.map((part: QuestionItem, index: number) => (
-        <Question
-          key={part._id + index}
-          _id={part._id}
-          answer={part.answer}
-          question={part.question}
-          ideas={part.ideas}
-          vocabulary={part.vocabulary}
-          order={part.order}
-        />
-      ));
-    }
+const renderContent = (status: string, questions: QuestionItem[]) => {
+  if (status !== "succeeded") {
+    return Array.from({ length: 10 }).map((_, index) => (
+      <CustomSkeleton key={index} />
+    ));
+  } else {
+    return questions.map((part: QuestionItem, index: number) => (
+      <Question
+        key={part._id + index}
+        _id={part._id}
+        answer={part.answer}
+        question={part.question}
+        ideas={part.ideas}
+        vocabulary={part.vocabulary}
+        order={part.order}
+      />
+    ));
   }
+}
 
-
+export default function Page() {
   const { id } = useParams();
   const dispatch = useDispatch<AppDispatch>();
   const part1 = useSelector((state: RootState) => state.partOne.part1);
