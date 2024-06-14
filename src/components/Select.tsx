@@ -6,20 +6,20 @@ import { SEO } from "./SEO";
 import { toast } from "sonner";
 interface Question {
   question: string;
-  author: string;
-  lastUpdatedTime: string;
+  author?: string;
+  lastUpdatedTime?: string;
   preview: string;
   questionId: string | number;
   order: number;
+  type: "part1" | "part2";
 }
 
 export const Select = ({
   question,
-  author,
-  lastUpdatedTime,
   preview,
   questionId,
   order,
+  type,
 }: Question) => {
   const router = useRouter();
 
@@ -27,7 +27,7 @@ export const Select = ({
   const handleRedirecter = (event: React.MouseEvent<HTMLElement>) => {
     event.preventDefault();
 
-    router.push("part1/" + questionId);
+    router.push(`${type}/` + questionId);
 
   };
 

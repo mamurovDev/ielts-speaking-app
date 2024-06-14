@@ -1,10 +1,11 @@
 "use client";
 import { useDispatch, useSelector } from "react-redux"
 import { useParams } from "next/navigation";
-import { fetchQuestions, selectQuestionsByPartId } from "@/store/features/partOneSlice";
+import { fetchQuestions, selectQuestionByPartId } from "@/store/features/partOneSlice";
 import { useEffect } from "react";
 import { AppDispatch, RootState } from "@/store/store";
 import { toast } from "sonner";
+import { ScrollArea } from "@/components/ui";
 import {
     Card,
     CardContent,
@@ -37,11 +38,11 @@ const renderContent = (status: string, vocabulary?: string[]) => {
 export default function Page() {
     const status = useSelector((state: RootState) => state.partOne.status);
     const part1 = useSelector((state: RootState) => state.partOne.part1);
-    
+
     const { id, question } = useParams<{ id: string | string[], question: string }>();
     const partId = Array.isArray(id) ? id[0] : id;
     const questionId = Array.isArray(question) ? question[0] : question;
-    const foundQuestion = useSelector((state: RootState) => selectQuestionsByPartId(state, partId, questionId));    
+    const foundQuestion = useSelector((state: RootState) => selectQuestionByPartId(state, partId, questionId));
     const dispatch = useDispatch<AppDispatch>();
     useEffect(() => {
         part1.length === 0 && dispatch(fetchQuestions());
@@ -68,7 +69,7 @@ export default function Page() {
                     <TabsTrigger value="answer">Answer</TabsTrigger>
                 </TabsList>
                 <TabsContent value="vocabulary" >
-                    <Card className="">
+                    <Card>
                         <CardHeader>
                             <CardTitle className="">Vocabulary</CardTitle>
                             <CardDescription className="" >
@@ -78,6 +79,7 @@ export default function Page() {
                         <CardContent className="space-y-2">
                             <ul className="my-6 ml-6 list-disc [&>li]:mt-2">
                                 {renderContent(status, foundQuestion.vocabulary)}
+
                             </ul>
                         </CardContent>
                     </Card>
@@ -93,6 +95,7 @@ export default function Page() {
                         <CardContent className="space-y-2">
                             <ul className="my-6 ml-6 list-disc [&>li]:mt-2">
                                 {renderContent(status, foundQuestion.ideas)}
+
                             </ul>
                         </CardContent>
 

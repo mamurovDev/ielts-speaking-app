@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 const questionSchema = new mongoose.Schema({
+  _id: String,
   question: String,
   answer: String,
   ideas: [String],
@@ -7,6 +8,7 @@ const questionSchema = new mongoose.Schema({
 });
 
 const part1Schema = new mongoose.Schema({
+  _id: String,
   name: String,
   author: String,
   lastUpdatedTime: String,

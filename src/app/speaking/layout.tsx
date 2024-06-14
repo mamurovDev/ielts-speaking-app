@@ -1,4 +1,5 @@
 import { Navigation } from "@/components";
+import { BreadcrumbDemo } from "@/components/breadCrumbDemo";
 
 export default function Layout({
   children,

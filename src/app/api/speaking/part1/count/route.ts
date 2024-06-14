@@ -1,13 +1,13 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
 import connectMongodb from "@/libs/mongodb";
 import Part1 from "@/models/part1";
 
 export async function GET() {
   try {
     await connectMongodb();
-    const part1 = await Part1.countDocuments();
+    const partOneCount = await Part1.countDocuments();
     return NextResponse.json(
-      { count: part1},
+      { count: partOneCount},
       { headers: { "Cache-Control": "max-age=3600" } }
     );
   } catch (error) {

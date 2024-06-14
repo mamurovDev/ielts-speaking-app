@@ -2,11 +2,13 @@ import { configureStore } from "@reduxjs/toolkit";
 import counterReducer from "./features/counterSlice";
 import partOneSlice from "./features/partOneSlice";
 import telegramChannelSlice from "./features/telegramChannelSlice";
+import partTwoSlice from "./features/partTwoSlice";
 
 export const store = configureStore({
   reducer: {
     counter: counterReducer,
     partOne: partOneSlice,
+    partTwo: partTwoSlice,
     telegramChannels: telegramChannelSlice,
   },
 });

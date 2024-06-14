@@ -4,3 +4,4 @@ export * from "./Select";
 export * from "./Question";
 export * from "./theme-provider";
 export * from "./TelegramChannel";
+export * from "./CustomSkeleton";

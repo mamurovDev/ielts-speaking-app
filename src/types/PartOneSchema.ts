@@ -1,4 +1,4 @@
-export type PartOneQuestions = {
+export type PartOneQuestion = {
   _id: string;
   name: string;
   author: string;
@@ -14,4 +14,4 @@ export type QuestionItem = {
   answer: string;
   ideas: string[];
   vocabulary: string[];
-}
+};

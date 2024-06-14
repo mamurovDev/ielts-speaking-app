@@ -2,7 +2,7 @@
 
 import { Select } from "@/components";
 import { ScrollArea, Skeleton } from "@/components/ui";
-import { PartOneQuestions, QuestionItem } from "@/types";
+import { PartOneQuestion, QuestionItem } from "@/types";
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchQuestions } from "@/store/features/partOneSlice";
@@ -16,7 +16,7 @@ export default function Page() {
   const dispatch = useDispatch<AppDispatch>();
 
   useEffect(() => {
-    dispatch(fetchQuestions());
+    part1.length === 0 && dispatch(fetchQuestions());
   }, []);
 
   const previewMaker = (questions: QuestionItem[]): string => {
@@ -30,13 +30,13 @@ export default function Page() {
 
 
 
-  const renderContent = (status: string, questions?: PartOneQuestions[]) => {
+  const renderContent = (status: string, questions?: PartOneQuestion[]) => {
     if (status !== "succeeded") {
       return Array.from({ length: 10 }).map((_, index) => (
         <CustomSkeleton key={index} />
       ));
     } else {
-      return questions?.map((part: PartOneQuestions, index: number) => (
+      return questions?.map((part: PartOneQuestion, index: number) => (
         <Select
           order={part.order}
           questionId={part._id}
@@ -45,6 +45,7 @@ export default function Page() {
           author={part.author}
           lastUpdatedTime={part.lastUpdatedTime}
           preview={previewMaker(part.questions)}
+          type="part1"
         />
       ))
     }
@@ -60,7 +61,8 @@ export default function Page() {
 
           {renderContent(status, part1)}
         </div>
-      </ScrollArea></>
+      </ScrollArea>
+    </>
   );
 }
 

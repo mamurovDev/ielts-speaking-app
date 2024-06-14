@@ -1,14 +1,13 @@
 import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
-import { PartOneQuestions, QuestionItem } from "@/types";
+import { PartOneQuestion, QuestionItem } from "@/types";
 import { RootState } from "@/store/store"; // Adjust the import according to your store configuration
 
 type TInitialState = {
-  part1: PartOneQuestions[];
-  status: 'idle' | 'loading' | 'succeeded' | 'failed';
+  part1: PartOneQuestion[];
+  status: "idle" | "loading" | "succeeded" | "failed";
   error: string | null | undefined;
 };
 const initialState: TInitialState = {
-
   part1: [],
   status: "idle",
   error: null,
@@ -28,14 +27,14 @@ export const partOneSlice = createSlice({
   name: "partOne",
   initialState,
   reducers: {
-    addPartOne: (state, action: PayloadAction<PartOneQuestions[]>) => {
+    addPartOne: (state, action: PayloadAction<PartOneQuestion[]>) => {
       state.part1.push(...action.payload);
     },
   },
   extraReducers: (builder) => {
     builder
       .addCase(fetchQuestions.fulfilled, (state, action) => {
-        state.part1 = action.payload.part1 || [];
+        state.part1 = action.payload || [];
         state.status = "succeeded";
       })
       .addCase(fetchQuestions.rejected, (state, action) => {
@@ -50,16 +49,15 @@ export const partOneSlice = createSlice({
 });
 
 // Selector to find questions by PartOneQuestions ID
-export const selectQuestionsByPartId = (
+export const selectQuestionByPartId = (
   state: RootState,
   partId: string,
   questionId: string
 ): any => {
   const foundPart = state.partOne.part1.find(
-    (part: PartOneQuestions) => part._id === partId
+    (part: PartOneQuestion) => part._id === partId
   );
   const emptyArray: QuestionItem[] = [];
-  const questions = foundPart?.questions || [];
   const returnedItem = {
     title: foundPart?.name,
     ...foundPart?.questions.find((question) => question._id === questionId),
