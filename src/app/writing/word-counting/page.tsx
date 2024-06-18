@@ -2,7 +2,6 @@
 import { Textarea } from "@/components/ui/"
 import { useState } from "react";
 export default function Page() {
-    const site = window.location.origin;
     const [lengthOfWord, setLengthOfWord] = useState(0);
     const [words, setWords] = useState("");
     const handleChangeInputValue = (e: React.ChangeEvent<HTMLTextAreaElement>) => {

@@ -1,4 +1,4 @@
-import { Inter } from "next/font/google";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import "./globals.css";
 import { Toaster } from "@/components/ui/sonner";
 import { Inter as FontSans } from "next/font/google";
@@ -44,6 +44,7 @@ export default function RootLayout({
             {children}
             <Toaster />
           </ThemeProvider>
+          <SpeedInsights /> 
         </body>
       </html>
     </StoreProvider >
