@@ -22,7 +22,8 @@ export async function GET() {
 
 export async function POST(request: NextRequest) {
   try {
-    await connectMongodb();
+    
+    await connectMongodb(); 
     const { name, username, img, bio } = await request.json();
     if (!name || !username || !img) {
       return NextResponse.json(
