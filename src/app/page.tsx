@@ -52,7 +52,7 @@ export default function Home() {
         <h1 className="md:text-5xl lg:text-7xl font-bold sm:text-4xl sm:mt-10 md:mt-0 text-center">
           Let&apos;s start <p style={linerStyle}>improving</p> today! 🙂
         </h1>
-        <article className="flex mt-8 sm:w-[85%] md:w-[95%] lg:w-[75%] justify-around sm:flex-col md:flex-row">
+        <article className="flex mt-8 sm:w-[90%] md:w-[95%] lg:w-[75%] justify-around sm:flex-col md:flex-row">
           <HomeCards
             title="Explore quick questions & answers"
             imagePath="/part1.png"
@@ -74,6 +74,12 @@ export default function Home() {
             imageDescription="Illustration showcasing top ideas for addressing part 3 questions comprehensively."
             route="/speaking/part3"
           />
+          <HomeCards
+            title="Count Words in Your Essay"
+            imagePath="/word-count.png"
+            imageDescription="Word Counter Tool"
+            route="/writing/word-counting"
+            minImagePath="/word-count-min.png" />
         </article>
       </div>
     </>

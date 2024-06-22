@@ -1,5 +1,5 @@
 function Page() {
-  return <>part3</>;
+  return <>this will be implemented very soon...</>;
 }
 
 export default Page;
