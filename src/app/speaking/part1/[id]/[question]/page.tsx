@@ -5,7 +5,6 @@ import { fetchQuestions, selectQuestionByPartId } from "@/store/features/partOne
 import { useEffect } from "react";
 import { AppDispatch, RootState } from "@/store/store";
 import { toast } from "sonner";
-import { ScrollArea } from "@/components/ui";
 import {
     Card,
     CardContent,
