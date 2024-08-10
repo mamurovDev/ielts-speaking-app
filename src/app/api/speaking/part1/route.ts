@@ -24,7 +24,7 @@ export async function GET() {
   try {
     await connectMongodb();
     const part1 = await Part1.find().sort({ order: 1 });
-
+    console.log(part1);
     return NextResponse.json(part1, {
       headers: { "Cache-Control": "max-age=86400" },
     });

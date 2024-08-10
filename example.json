@@ -1,66 +1,281 @@
 {
-  "_id": "djis89uf8j9idjefj9efj9",
-  "name": "Enjoyable Daily Routines",
-  "question": "Describe a daily routine that you enjoy.",
+  "_id": {
+    "$oid": "66a60fd245455457350f644a"
+  },
+  "name": "Daily routines",
   "order": 1,
-  "points": [
+  "author": "@nurmuhammad",
+  "lastUpdate": "2021-09-01T00:00:00.000Z",
+  "questions": [
     {
-      "_id": "6091a7835e1a1424b836f9a1",
-      "question": "What do you do?",
-      "answers": [
-        "I wake up early every morning and practice yoga to start my day with positive energy.",
-        "In the afternoon, I take a brisk walk in the park to refresh my mind and body.",
-        "During the evening, I enjoy cooking dinner while listening to my favorite music.",
-        "Before bedtime, I like to unwind by reading a good book or watching an interesting documentary."
+      "_id": {
+        "$oid": "66a60fd245455457350f6423a"
+      },
+      "order": 1,
+      "question": "What are some common daily routines that people find enjoyable?",
+      "answer": "Many people find joy in simple daily routines that offer a sense of structure and fulfillment. For instance, starting the day with a morning walk or jog can be quite refreshing and invigorating. It not only boosts physical health but also improves mental clarity. Another enjoyable routine is having a leisurely breakfast, where people can savor their favorite meals and spend time with family. Additionally, some individuals enjoy setting aside time for reading or meditation, as these activities provide a peaceful start to their day. In the evening, routines like cooking dinner, watching a favorite TV show, or spending quality time with loved ones can also bring a lot of satisfaction and relaxation. Overall, these routines help individuals feel grounded and can significantly enhance their overall well-being.",
+      "ideas": [
+        "Morning walk or jog",
+        "Leisurely breakfast",
+        "Reading or meditation",
+        "Cooking dinner",
+        "Watching a favorite TV show",
+        "Spending quality time with loved ones"
+      ],
+      "vocabulary": [
+        "structure",
+        "fulfillment",
+        "invigorating",
+        "mental clarity",
+        "leisurely",
+        "savor",
+        "peaceful",
+        "grounded",
+        "well-being"
       ]
     },
     {
-      "_id": "6091a7845e1a1424b836f9a2",
-      "question": "When did it become your daily routine?",
-      "answers": [
-        "I began practicing yoga every morning during my college years, and it has since become an integral part of my daily routine.",
-        "My afternoon walks started when I moved to a new city and discovered the beautiful park nearby.",
-        "Cooking dinner every evening became a habit when I started living on my own after graduation.",
-        "Reading before bedtime has been a lifelong habit that I inherited from my parents."
+      "_id": {
+        "$oid": "66a60fd245455457350f6423b"
+      },
+      "order": 2,
+      "question": "How do daily routines impact a person's productivity and mood?",
+      "answer": "Daily routines can significantly impact both productivity and mood. Having a structured schedule helps individuals prioritize tasks and manage their time more effectively, leading to increased productivity. For example, setting specific times for work, breaks, and leisure ensures a balanced day and reduces stress. Furthermore, predictable routines can enhance a person's mood by providing stability and reducing anxiety. When people know what to expect, they can approach their day with more confidence and less worry, which positively affects their overall mental health.",
+      "ideas": [
+        "Structured schedule",
+        "Time management",
+        "Balanced day",
+        "Reduced stress",
+        "Predictability",
+        "Stability and confidence"
+      ],
+      "vocabulary": [
+        "productivity",
+        "prioritize",
+        "manage",
+        "effectively",
+        "balanced",
+        "stability",
+        "anxiety",
+        "confidence",
+        "mental health"
       ]
     },
     {
-      "_id": "6091a7845e1a1424b836f9a3",
-      "question": "Will you change it in the future?",
-      "answers": [
-        "I don't foresee any changes in my daily routines as they contribute to my overall well-being and happiness.",
-        "While I'm open to new experiences, I believe these routines will remain unchanged for the foreseeable future.",
-        "My daily rituals are deeply ingrained, and I see no reason to alter them anytime soon."
+      "_id": {
+        "$oid": "66a60fd245455457350f6423c"
+      },
+      "order": 3,
+      "question": "In what ways can technology influence our daily routines?",
+      "answer": "Technology has a profound influence on our daily routines, offering both advantages and challenges. On one hand, technology enhances efficiency through tools like digital calendars, reminders, and automation, helping people stay organized and save time. It also enables remote work, allowing more flexibility in balancing personal and professional life. On the other hand, excessive use of technology can disrupt routines by causing distractions and reducing face-to-face interactions. Therefore, it's essential to use technology mindfully to maintain healthy daily routines.",
+      "ideas": [
+        "Digital calendars and reminders",
+        "Automation",
+        "Remote work",
+        "Flexibility",
+        "Distractions",
+        "Face-to-face interactions"
+      ],
+      "vocabulary": [
+        "influence",
+        "efficiency",
+        "automation",
+        "flexibility",
+        "excessive",
+        "disrupt",
+        "distractions",
+        "interactions",
+        "mindfully"
       ]
     },
     {
-      "_id": "6091a7845e1a1424b836f9a4",
-      "question": "Why do you enjoy it?",
-      "answers": [
-        "I enjoy practicing yoga because it helps me stay centered and reduces stress levels throughout the day.",
-        "Taking walks in the park allows me to connect with nature and clear my mind from daily worries.",
-        "Cooking dinner is a creative outlet for me, and I find joy in experimenting with new recipes and flavors.",
-        "Reading before bedtime is a calming activity that helps me unwind and escape into different worlds."
+      "_id": {
+        "$oid": "66a60fd245455457350f6423d"
+      },
+      "order": 4,
+      "question": "How can people incorporate more enjoyable activities into their daily routines?",
+      "answer": "Incorporating more enjoyable activities into daily routines involves planning and prioritization. One approach is to set aside specific times for hobbies or activities that bring joy, such as reading, exercise, or creative pursuits. Another strategy is to integrate small pleasures into existing routines, like listening to music during commutes or having a coffee break in the afternoon. By consciously scheduling time for enjoyable activities, people can enhance their daily experiences and improve overall satisfaction with their routines.",
+      "ideas": [
+        "Planning and prioritization",
+        "Set aside time for hobbies",
+        "Integrate small pleasures",
+        "Listening to music",
+        "Coffee breaks",
+        "Improve satisfaction"
+      ],
+      "vocabulary": [
+        "incorporating",
+        "prioritization",
+        "joy",
+        "pursuits",
+        "consciously",
+        "scheduling",
+        "enhance",
+        "satisfaction",
+        "existing routines"
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "66a60fd245455457350f6423e"
+      },
+      "order": 5,
+      "question": "Do you think routines are more beneficial for adults or children? Why?",
+      "answer": "Routines are beneficial for both adults and children, but they play different roles in each group. For children, routines provide a sense of security and help them learn discipline and time management skills. Predictable routines can also reduce anxiety and make transitions, such as moving from playtime to bedtime, smoother. For adults, routines help manage stress by organizing daily tasks and balancing work and personal life. While routines benefit both groups, they are particularly crucial for children in developing essential life skills.",
+      "ideas": [
+        "Sense of security",
+        "Discipline and time management",
+        "Reduce anxiety",
+        "Smooth transitions",
+        "Manage stress",
+        "Balance work and personal life"
+      ],
+      "vocabulary": [
+        "beneficial",
+        "security",
+        "discipline",
+        "predictable",
+        "anxiety",
+        "transitions",
+        "crucial",
+        "developing",
+        "essential"
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "66a60fd245455457350f6423f"
+      },
+      "order": 6,
+      "question": "What role does cultural background play in shaping a person's daily routines?",
+      "answer": "Cultural background significantly influences a person's daily routines, as it dictates societal norms, values, and traditions. For example, in some cultures, family meals are central to daily routines, while in others, individual schedules may take precedence. Cultural practices also affect work habits, leisure activities, and religious observances, all of which shape daily routines. Understanding cultural influences on routines helps foster appreciation for diversity and respect for different ways of living.",
+      "ideas": [
+        "Societal norms and values",
+        "Traditions",
+        "Family meals",
+        "Individual schedules",
+        "Work habits",
+        "Religious observances"
+      ],
+      "vocabulary": [
+        "cultural",
+        "influences",
+        "dictates",
+        "norms",
+        "precedence",
+        "practices",
+        "habits",
+        "diversity",
+        "appreciation"
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "66a60fd245455457350f64240"
+      },
+      "order": 7,
+      "question": "How important is it to have a routine that balances work and leisure?",
+      "answer": "Having a routine that balances work and leisure is essential for maintaining overall well-being. A balanced routine ensures that individuals allocate time for relaxation and enjoyment, which can prevent burnout and reduce stress. It also allows people to pursue hobbies, spend time with family and friends, and recharge mentally and physically. In the long run, a well-balanced routine contributes to higher productivity and a more fulfilling life.",
+      "ideas": [
+        "Overall well-being",
+        "Prevent burnout",
+        "Reduce stress",
+        "Relaxation and enjoyment",
+        "Pursue hobbies",
+        "Recharge mentally and physically"
+      ],
+      "vocabulary": [
+        "balance",
+        "essential",
+        "allocate",
+        "burnout",
+        "recharge",
+        "pursue",
+        "fulfilling",
+        "higher productivity",
+        "long run"
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "66a60fd245455457350f64241"
+      },
+      "order": 8,
+      "question": "Can having a routine lead to a monotonous lifestyle, or does it provide more freedom? Why?",
+      "answer": "While routines can sometimes lead to a monotonous lifestyle if they become too rigid, they generally provide more freedom by offering structure and reducing decision fatigue. A routine helps individuals focus on priorities without constantly worrying about what to do next. However, it's important to include variety and flexibility within routines to prevent boredom. By consciously planning for diversity, routines can become a source of freedom rather than a constraint.",
+      "ideas": [
+        "Rigid vs. flexible routines",
+        "Decision fatigue",
+        "Focus on priorities",
+        "Include variety",
+        "Prevent boredom",
+        "Source of freedom"
+      ],
+      "vocabulary": [
+        "monotonous",
+        "rigid",
+        "freedom",
+        "structure",
+        "fatigue",
+        "flexibility",
+        "boredom",
+        "constraint",
+        "diversity"
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "66a60fd245455457350f64242"
+      },
+      "order": 9,
+      "question": "How have daily routines changed over the past decade?",
+      "answer": "Daily routines have changed significantly over the past decade due to advancements in technology and shifts in societal norms. The rise of remote work and flexible hours has altered traditional work schedules, allowing more people to customize their routines. Technology has also introduced new habits, such as checking smartphones frequently and using apps for everything from fitness tracking to meditation. Additionally, increased awareness of mental health and well-being has led to routines that prioritize self-care and work-life balance.",
+      "ideas": [
+        "Advancements in technology",
+        "Remote work",
+        "Flexible hours",
+        "Smartphone habits",
+        "Apps for various tasks",
+        "Mental health awareness"
+      ],
+      "vocabulary": [
+        "significantly",
+        "advancements",
+        "customize",
+        "frequently",
+        "awareness",
+        "well-being",
+        "self-care",
+        "work-life balance",
+        "traditional"
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "66a60fd245455457350f64243"
+      },
+      "order": 10,
+      "question": "What are the benefits and drawbacks of sticking to a strict daily routine?",
+      "answer": "Sticking to a strict daily routine has both benefits and drawbacks. On the positive side, it provides structure and consistency, which can enhance productivity and efficiency. It also minimizes decision-making time, allowing individuals to focus on important tasks. However, a strict routine can lead to rigidity, limiting spontaneity and creativity. It may also cause stress if unexpected events disrupt the schedule. Therefore, it's important to strike a balance between routine and flexibility.",
+      "ideas": [
+        "Structure and consistency",
+        "Productivity and efficiency",
+        "Minimize decision-making",
+        "Rigidity",
+        "Limit spontaneity",
+        "Stress from disruptions"
+      ],
+      "vocabulary": [
+        "benefits",
+        "drawbacks",
+        "consistency",
+        "efficiency",
+        "spontaneity",
+        "creativity",
+        "disrupt",
+        "balance",
+        "flexibility"
       ]
     }
-  ],
-  "vocabulary": [
-    "routine",
-    "enjoy",
-    "habit",
-    "daily",
-    "change",
-    "future",
-    "integral",
-    "well-being",
-    "happiness",
-    "centered",
-    "stress",
-    "calming"
-  ],
-  "answers": [
-    "My morning yoga sessions and afternoon walks are integral parts of my daily routine, contributing to my overall well-being and happiness. I don't anticipate any changes in these habits as they help me stay centered and reduce stress levels.",
-    "Cooking dinner every evening has become a cherished habit that brings me joy and allows me to express my creativity in the kitchen. While I'm open to new experiences, I don't plan on altering this routine in the near future.",
-    "Reading before bedtime is a calming ritual that I've enjoyed since childhood. It helps me unwind and escape into different worlds, making it an essential part of my daily life."
   ]
 }
